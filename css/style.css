@@ -1,0 +1,81 @@
+/* ---- base style ---- */
+
+html{
+    position: fixed;
+    margin: 0;
+    padding: 0;
+	width: 100%;
+	height: 100%;
+    background:rgb(255, 0, 0);
+}
+body{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background:rgb(0, 255, 0);
+}
+
+
+/* ---- style for paricle container ---- */
+
+#particles-js{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 10);
+}
+
+
+/* ---- style for site content ---- */
+
+#info-box{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    /*z-index: 2;*/
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+#scroll-box{
+    overflow-y: auto;
+    background: transparent;
+}
+
+#picture-box{
+    z-index: 2;
+}
+
+#name-box{
+    z-index: 2;
+    font-size: 40px;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#bio-box{
+    z-index: 2;
+    font-size: 16px;
+    color: rgb(199, 199, 199);
+    text-transform: capitalize;
+    font-weight: normal; 
+}
+
+#link-box{
+    z-index: 2;
+}
+
+#legal-box{
+    z-index: 2;
+    font-size: 10px;
+    color: rgb(155, 155, 155);
+    text-transform: none;
+    font-weight: normal;
+}
