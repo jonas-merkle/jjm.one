@@ -14,9 +14,11 @@ jobs:
         
       - name: Build Ouput
         run: |
+          ls -la ../
           ls -la
           mkdir .public
-          rsync -av --exclude={'.*', '*.md'} ./* .public
+          ls -la
+          # rsync -av --exclude={'.*', '*.md'} ./* .public
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
