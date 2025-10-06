@@ -1,81 +1,84 @@
 /* ---- base style ---- */
-
-html{
-    position: fixed;
-    margin: 0;
-    padding: 0;
-	width: 100%;
-	height: 100%;
-    background:rgb(255, 0, 0);
-}
-body{
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    background:rgb(0, 255, 0);
+:root {
+  --bg: #0a0a14;
+  --text: #f5f5f5;
+  --muted: #bdbdbd;
 }
 
-
-/* ---- style for paricle container ---- */
-
-#particles-js{
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    background: rgb(0, 0, 10);
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
 }
 
-
-/* ---- style for site content ---- */
-
-#info-box{
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    /*z-index: 2;*/
-    width: 100%;
-    height: 100%;
-    background: transparent;
+/* ---- particle container ---- */
+#particles-js {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(1200px 800px at 50% 20%, #111827 0%, #0a0a14 60%);
 }
 
-#scroll-box{
-    overflow-y: auto;
-    background: transparent;
+/* ---- site content ---- */
+#info-box {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: transparent;
 }
 
-#picture-box{
-    z-index: 2;
+#scroll-box {
+  overflow-y: auto;
+  background: transparent;
 }
 
-#name-box{
-    z-index: 2;
-    font-size: 40px;
-    color: whitesmoke;
-    text-transform: uppercase;
-    font-weight: bold;
+#picture-box {
 }
 
-#bio-box{
-    z-index: 2;
-    font-size: 16px;
-    color: rgb(199, 199, 199);
-    text-transform: capitalize;
-    font-weight: normal; 
+#name-box {
+  font-size: 40px;
+  color: var(--text);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
 }
 
-#link-box{
-    z-index: 2;
+#name-box h1 {
+  font-size: clamp(28px, 4vw, 44px);
+  margin: 0;
 }
 
-#legal-box{
-    z-index: 2;
-    font-size: 10px;
-    color: rgb(155, 155, 155);
-    text-transform: none;
-    font-weight: normal;
+#bio-box {
+  font-size: 16px;
+  color: var(--muted);
+  text-transform: none;
+  font-weight: 400;
+}
+
+#link-box img {
+  transition: transform 0.15s ease;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+}
+#link-box a:hover img,
+#link-box a:focus img {
+  transform: translateY(-2px) scale(1.03);
+}
+
+#legal-box {
+  font-size: 10px;
+  color: #9b9b9b;
+  text-transform: none;
+  font-weight: 400;
+}
+
+/* High contrast focus outlines */
+a:focus {
+  outline: 2px dashed #e5e7eb;
+  outline-offset: 4px;
 }
